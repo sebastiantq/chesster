@@ -1,0 +1,53 @@
+.inicio{
+    height: calc(100vh - 200px);
+    width: 90%;
+    background-image: url("./backgroundInicio.jpeg");
+    background-size: cover;
+    display: flex;
+    padding: 75px 5%;
+}
+
+.landAction{
+    width: 60%;
+    text-align: left;
+}
+
+.landAction > img{
+    width: 15%;
+    border-radius: 5px;
+}
+
+.landAction > h2{
+    color: white;
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.landAction > button{
+    margin-top: 20px;
+    padding: 10px 75px;
+    background-color: white;
+    color: black;
+    font-family: 'Lobster Two';
+    font-size: 20px;
+    border: none;
+}
+
+.landAction > button:hover{
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+}
+
+.landText{
+    width: 40%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.landText > p{
+    color: white;
+    font-size: 30px;
+    width: 59%;
+    margin: 50px 0px 0px auto;
+}

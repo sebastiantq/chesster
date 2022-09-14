@@ -4,6 +4,7 @@ import InicioButton from './Menu/InicioButton';
 import InfoButton from './Menu/InfoButton';
 import JugarButton from './Menu/JugarButton';
 import LoginButton from './Menu/LoginButton';
+import Juego from "./Juego";
 
 class Menu extends React.Component{
     render(){
@@ -18,7 +19,7 @@ class Menu extends React.Component{
                 <div>
                     { menuButtons.map(button => (
                         button
-                    )) } 
+                    )) }
                 </div>
             </div>
         );

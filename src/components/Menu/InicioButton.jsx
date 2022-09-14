@@ -7,7 +7,7 @@ class InicioButton extends React.Component{
     
     render(){
         return(
-            <button onClick={this.proximamente} className="menu-button black-button">Inicio</button>
+            <button onClick={this.proximamente} className="menu-button black-button" >Inicio</button>
         );
     }
 }

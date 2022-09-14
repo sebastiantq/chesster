@@ -7,7 +7,7 @@ class JugarButton extends React.Component{
     
     render(){
         return(
-            <button onClick={this.proximamente} className="menu-button black-button">Jugar</button>
+            <button onClick={this.proximamente} className="menu-button black-button"><link to="/Juego"></link>Jugar</button>
         );
     }
 }

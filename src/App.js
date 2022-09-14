@@ -2,7 +2,7 @@ import React from 'react';
 import Menu from './components/Menu';
 import Juego from './components/Juego';
 import Inicio from './components/Inicio';
-
+import {Routes, Route} from 'react-router-dom';
 import './App.css';
 import './components/Menu/Menu.css'
 import './components/Juego/Juego.css'
@@ -18,6 +18,10 @@ class App extends React.Component{
         <Inicio/>
       </div>
     );
+    <Routes>
+      <Route path='/' element={<Menu/>}></Route>
+      <Route path='/Juego' element={<Juego/>}></Route>
+    </Routes>
   }
 }
 

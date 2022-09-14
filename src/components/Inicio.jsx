@@ -12,6 +12,7 @@ class Inicio extends React.Component{
                     <img src="./logoInicio.jpeg" alt="ChessTer"/>
                     <h2>ChessTer</h2>
                     <button onClick={this.proximamente}>Comienza ahora</button>
+                    <p>¿Qué esperas para empezar a ganar?</p>
                 </div>
                 <div className="landText">
                     <p>93% de nuestros jugadores han mejorado sus habilidades despues de 1 mes de juego</p>

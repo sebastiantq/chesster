@@ -10,6 +10,7 @@
 .landAction{
     width: 60%;
     text-align: left;
+    height: 100%;
 }
 
 .landAction > img{
@@ -47,7 +48,16 @@
 
 .landText > p{
     color: white;
+    font-size: 40px;
+    width: 70%;
+    margin: 40px 0px 0px auto;
+    margin-top: 20%;
+}
+
+.landAction > p{
+    color: white;
     font-size: 30px;
     width: 59%;
-    margin: 50px 0px 0px auto;
+    margin-top: 80px;
 }
+

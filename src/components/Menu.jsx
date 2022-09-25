@@ -4,7 +4,7 @@ import InicioButton from './Menu/InicioButton';
 import InfoButton from './Menu/InfoButton';
 import JugarButton from './Menu/JugarButton';
 import LoginButton from './Menu/LoginButton';
-import Juego from "./Juego";
+// import Juego from "./Juego";
 
 class Menu extends React.Component{
     render(){

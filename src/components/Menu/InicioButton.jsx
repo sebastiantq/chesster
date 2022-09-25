@@ -1,13 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class InicioButton extends React.Component{
-    proximamente = () => {
-        alert("¡Proximamente!")
-    };
-    
     render(){
         return(
-            <button onClick={this.proximamente} className="menu-button black-button" >Inicio</button>
+            <Link to={"/"} className="menu-button black-button" >Inicio</Link>
         );
     }
 }

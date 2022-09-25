@@ -14,14 +14,12 @@ class App extends React.Component{
       <div className="App">
         <link href='https://fonts.googleapis.com/css?family=Lobster Two' rel='stylesheet'></link>
         <Menu/>
-        {/* <Juego/> */}
-        <Inicio/>
+        <Routes>
+          <Route path='/' element={<Inicio/>}></Route>
+          <Route path='/jugar' element={<Juego/>}></Route>
+        </Routes>
       </div>
     );
-    <Routes>
-      <Route path='/' element={<Menu/>}></Route>
-      <Route path='/Juego' element={<Juego/>}></Route>
-    </Routes>
   }
 }
 

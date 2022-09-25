@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class LoginButton extends React.Component{
     proximamente = () => {
@@ -7,7 +8,7 @@ class LoginButton extends React.Component{
     
     render(){
         return(
-            <button onClick={this.proximamente} className="menu-button white-button">Login</button>
+            <Link onClick={this.proximamente} className="menu-button white-button">Login</Link>
         );
     }
 }

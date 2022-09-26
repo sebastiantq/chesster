@@ -1,16 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-class LoginButton extends React.Component{
-    proximamente = () => {
-        alert("¡Proximamente!")
+import { useDispatch } from "react-redux";
+import { setNotificacion } from "../../store/notificacion"
+
+const LoginButton = () => {
+    const dispatch = useDispatch()
+
+    const proximamente = () => {
+        dispatch(setNotificacion("¡Próximamente!"))
     };
     
-    render(){
-        return(
-            <Link onClick={this.proximamente} className="menu-button white-button">Login</Link>
-        );
-    }
+    return(
+        <Link onClick={proximamente} className="menu-button white-button">Login</Link>
+    );
 }
 
 export default LoginButton;

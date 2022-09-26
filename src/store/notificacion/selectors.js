@@ -1,0 +1,1 @@
+export const selectNotificacion = (state) => state.notificacion

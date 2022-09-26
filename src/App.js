@@ -3,6 +3,7 @@ import Menu from './components/Menu';
 import Juego from './components/Juego';
 import Inicio from './components/Inicio';
 import {Routes, Route} from 'react-router-dom';
+
 import './App.css';
 import './components/Menu/Menu.css'
 import './components/Juego/Juego.css'

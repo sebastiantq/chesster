@@ -1,13 +1,11 @@
-import { createStore, applyMiddleware } from "redux"
-import { composeWithDevTools } from "redux-devtools-extension"
-import thunk from "redux-thunk"
+import React from "react"
+import { configureStore } from "@reduxjs/toolkit"
+import { Provider as ReduxProvider, useSelector, useDispatch } from "react-redux"
 
-const middleware = [ thunk ]
+import notificacion from "./notificacion"
 
-const composedEnhancers = composeWithDevTools(
-    applyMiddleware(...middleware)
-)
+const store = configureStore({ reducer: { notificacion } })
 
-const store = createStore(composedEnhancers)
+const Provider = ({ children }) => <ReduxProvider store={store}>{children}</ReduxProvider>
 
-export default store
+export { Provider, useSelector, useDispatch }

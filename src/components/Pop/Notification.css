@@ -1,0 +1,23 @@
+.not{
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    width: 20vw;
+    height: 10vw;
+}
+
+.not-top{
+    height: 20%;
+    width: calc(100% - 20px);
+    background-color: gray;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.not-bot{
+    height: calc(80% - 30px);
+    width: calc(100% - 30px);
+    background-color: white;
+    padding: 15px;
+    border-radius: 0px 0px 10px 10px;
+}

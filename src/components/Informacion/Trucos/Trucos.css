@@ -1,0 +1,16 @@
+.trucosPage{
+    width: 100%;
+    min-height: calc(100vh - 70px);
+}
+
+.trucosPage > h2{
+    color: white;
+    margin: 20px;
+}
+
+.trucosPage > p{
+    color: white;
+    width: 80%;
+    text-align: justify;
+    margin: auto;
+}

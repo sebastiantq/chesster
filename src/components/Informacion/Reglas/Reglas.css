@@ -1,0 +1,16 @@
+.reglasPage{
+    width: 100%;
+    min-height: calc(100vh - 70px);
+}
+
+.reglasPage > h2{
+    color: white;
+    margin: 20px;
+}
+
+.reglasPage > p{
+    color: white;
+    width: 80%;
+    text-align: justify;
+    margin: auto;
+}

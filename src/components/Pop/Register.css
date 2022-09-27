@@ -1,0 +1,116 @@
+.blur{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(2px);
+}
+
+.register{
+    position: absolute;
+    background-color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 40vw;
+    height: calc(70vh + 80px);
+    border-radius: 30px;
+}
+
+.logo{
+    text-decoration: none;
+    color: black;
+}
+
+.top{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.top > img{
+    width: 30px;
+}
+
+.top > h2{
+    margin-left: 20px;
+}
+
+.user, .email, .pass{
+    margin-bottom: 20px;
+}
+
+.user, .email, .pass{
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: left;
+}
+
+.user > label, .email > label, .pass > label{
+    text-align: left;
+    width: 80%;
+    font-weight: bold;
+}
+
+.user > input, .email > input, .pass > input{
+    width: 80%;
+    padding: 8px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid gray;
+    margin-top:10px;
+}
+
+.buttons{
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons > button{
+    background-color: goldenrod;
+    padding: 5px 10px;
+    width: 60%;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 1px solid gray;
+    font-family: 'Lobster Two';
+    font-size: 17px;
+}
+
+.buttons > button:hover{
+    cursor: pointer;
+}
+
+.buttons > a{
+    margin-top: 5px;
+    text-decoration: underline;
+}
+
+.buttons > a:hover{
+    cursor: pointer;
+}
+
+.buttons > .enlace{
+    margin-top: 5px;
+    background:none;
+    border: none;
+    text-decoration: underline;
+    font-family: "Lobster Two";
+    font-weight: 100;
+    color: black;
+}
+
+.buttons > .enlace:hover{
+    cursor: pointer;
+}

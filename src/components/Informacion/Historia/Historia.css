@@ -1,0 +1,16 @@
+.historiaPage{
+    width: 100%;
+    min-height: calc(100vh - 70px);
+}
+
+.historiaPage > h2{
+    color: white;
+    margin: 20px;
+}
+
+.historiaPage > p{
+    color: white;
+    width: 80%;
+    text-align: justify;
+    margin: auto;
+}

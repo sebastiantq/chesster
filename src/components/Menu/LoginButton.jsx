@@ -1,18 +1,30 @@
-import React from "react";
+import React /*, { useState } */ from "react";
 import { Link } from "react-router-dom";
 
-import { useDispatch } from "react-redux";
-import { setNotificacion } from "../../store/notificacion"
+// import { useDispatch } from "react-redux";
+// import { setNotificacion } from "../../store/notificacion"
+
+// import Login from "../Pop/Login";
+// import Register from "../Pop/Register"
 
 const LoginButton = () => {
-    const dispatch = useDispatch()
+    // const [popup, setPopup] = useState("") 
 
-    const proximamente = () => {
-        dispatch(setNotificacion("¡Próximamente!"))
-    };
+    // const dispatch = useDispatch()
+
+    /* const proximamente = () => {
+        // dispatch(setNotificacion("¡Próximamente!"))
+        // setPopup("login")
+        navigate("/login")
+    }; */
     
     return(
-        <Link onClick={proximamente} className="menu-button white-button">Login</Link>
+        <>
+            <Link to="/login" className="menu-button white-button">Login</Link>
+        
+            {/* { popup === "login" || <Login setPopup={ setPopup }/> } */}
+            {/* { popup === "register" && <Register setPopup={ setPopup }/> } */}
+        </>
     );
 }
 

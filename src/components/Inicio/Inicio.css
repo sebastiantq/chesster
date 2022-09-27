@@ -1,5 +1,5 @@
 .inicio{
-    height: calc(100vh - 200px);
+    min-height: calc(100vh - 200px);
     width: 90%;
     background-image: url("./backgroundInicio.jpeg");
     background-size: cover;

@@ -22,11 +22,12 @@
     align-items:center;
     justify-content:center;
     vertical-align: middle;
+    text-decoration: none;
     height: 100%;
     width: 100px;
     border: none;
     font-family: 'Lobster Two';
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .left-menu-div > h1{

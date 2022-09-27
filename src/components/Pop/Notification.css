@@ -1,5 +1,5 @@
 .not{
-    position: absolute;
+    position: fixed;
     right: 20px;
     bottom: 40px;
     width: 20vw;
@@ -12,6 +12,21 @@
     background-color: gray;
     padding: 10px;
     border-radius: 10px 10px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-top > button{
+    background: none;
+    border: none;
+    float: right;
+    position: absolute;
+    right: 20px;
+}
+
+.not-top > button:hover{
+    cursor: pointer;
 }
 
 .not-bot{

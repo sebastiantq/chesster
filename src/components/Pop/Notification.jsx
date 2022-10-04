@@ -1,10 +1,18 @@
 import React from 'react'
 
+import { useDispatch /*, useSelector */ } from "react-redux";
+// import { useNavigate } from "react-router-dom/dist";
+
+import { setNotificacion } from "../../store/notificacion"
+// import { selectNotificacion } from "../../store/notificacion/selectors"
+
 import "./Notification.css"
 
 const Notification = (props) => {
+  const dispatch = useDispatch()
+
   const close = () => {
-    // document.getElementById("notif").remove()
+    dispatch(setNotificacion(null))
   }
 
   return (

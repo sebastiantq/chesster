@@ -4,6 +4,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    /* background-color:#E3E0E0;
+    background-color: #DBC0AB; */
+    /* background-color: #967258; */
+    /* background-color: #ECE0D0; */
+    background-color: #F1E8DC;
 }
 
 .informacion > a{

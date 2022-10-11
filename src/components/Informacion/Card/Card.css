@@ -1,0 +1,68 @@
+.card {
+  background-color: white;
+  width: calc(25vw - 40px);
+  height: calc(80vh - 40px);
+  box-shadow: 0 0 7px black;
+}
+
+.card:hover {
+  background-color: black;
+}
+
+.card:hover p {
+  color: white;
+}
+
+.card-top {
+  width: 100%;
+  height: 60%;
+}
+.card-bot {
+  width: 100%;
+  height: 40%;
+  overflow: hidden;
+}
+
+.card-bot > img {
+  overflow: hidden;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+}
+.top-img {
+  width: 100%;
+  height: 50%;
+}
+.top-title {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-size: 30px;
+}
+.description {
+  text-align: justify;
+  display: block;
+  width: 100%;
+  font-size: 5px;
+}
+
+.top-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-img p {
+  font-size: 80px;
+  font-family: "Teko";
+  font-weight: bold;
+}

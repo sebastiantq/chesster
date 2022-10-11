@@ -1,20 +1,27 @@
 import React from 'react'
 
+import Footer from '../../Footer'
 import "./Historia.css"
 
 function Historia() {
   return (
     <div className='historiaPage'>
-      <h2>Historia</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In venenatis sollicitudin tellus ac vulputate. Donec vestibulum sit amet nulla sit amet rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie iaculis lorem, sed rhoncus lacus. In non lobortis mauris. Sed elit mi, condimentum eu sapien quis, tempus convallis mauris. Fusce pretium mi ac turpis rutrum auctor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent nec consectetur massa, in accumsan eros. Phasellus laoreet eros nec vestibulum lacinia. Quisque ac placerat elit.
-
-Fusce elit erat, vestibulum vel velit a, venenatis venenatis leo. Curabitur fringilla nulla eget lectus posuere, non facilisis odio ultricies. Mauris tristique ipsum et nunc rhoncus finibus. Donec malesuada feugiat sagittis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean id eros ut massa fermentum molestie. Vestibulum finibus, arcu ut egestas maximus, nisl turpis facilisis lorem, blandit vehicula lorem massa non mauris. Sed non nunc a dolor tristique scelerisque. Vestibulum vel luctus eros. Phasellus ac cursus urna. Ut id arcu porta, placerat velit ut, viverra lorem.
-
-Sed hendrerit tortor eu metus mattis, quis sodales turpis vehicula. Aenean non felis auctor, sagittis magna ac, molestie tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum lorem ipsum, tincidunt vel vestibulum id, lobortis vel tellus. Cras volutpat eros at ligula facilisis, ac malesuada nunc hendrerit. Vivamus nec sapien quis ipsum ultricies tempor. Duis vitae ultrices augue, sit amet gravida turpis. Nulla tincidunt nisl ut lectus tempor condimentum. Nulla sed magna in urna finibus efficitur sed ut erat. Sed interdum ultrices ipsum, eget elementum dui eleifend sed. Pellentesque lacinia quam vel dolor vulputate tristique. Aenean cursus lorem id ullamcorper elementum. Nam at velit augue.
-
-Phasellus scelerisque in nunc in aliquam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla facilisis condimentum lacus, non vehicula lectus vestibulum at. Integer ipsum ex, consectetur et arcu id, faucibus rhoncus nulla. Aliquam erat volutpat. Nulla eget ipsum nec lacus rutrum semper varius quis sapien. Maecenas venenatis justo at mi suscipit aliquet. Duis vulputate odio sed arcu mattis finibus. Mauris eget ullamcorper felis, vel placerat nulla. Morbi ac iaculis urna. Nullam vulputate, sapien vitae mollis luctus, arcu odio pulvinar magna, non fringilla nibh nibh ac mauris. Ut blandit pretium nibh sit amet molestie. Integer ultrices tellus nec libero tincidunt gravida. Fusce placerat orci nisl, id vulputate mauris eleifend ut. Nam vitae lorem at dolor ornare eleifend.
-
-Etiam nec tristique orci. Integer nec venenatis velit. Fusce nisl turpis, finibus eu scelerisque sed, faucibus a nibh. Integer ultrices augue eget rutrum mollis. Nunc eu dapibus lacus, ut efficitur elit. In porta nibh eget posuere tincidunt. Phasellus id lectus placerat, tristique diam a, facilisis elit. Sed et euismod turpis. Nulla facilisi. Nulla pharetra purus lacus, sit amet hendrerit tortor fermentum id.</p>
+      <div className='historiaPage-IMG'>
+        <div className='titulo'>
+        < h1>Origen</h1>
+        </div>
+      </div>
+      <div className="historiaPage-info">
+        <div className='left-info'>
+          <h1>El Juego De La Guerra</h1>
+          <p>"Podemos decir también que el ajedrez tiene su origen en la India, más concretamente en el valle del Indo, y data del siglo VI d.C. Originalmente conocido como Chaturanga, o juego del ejército, se difundió rápidamente por las rutas comerciales, llegó a Persia, y desde allí al Imperio bizantino, extendiéndose posteriormente por toda Asia."</p>
+          <p>" El juego llegó a Europa entre los años 700 y 900, a través de la conquista musulmana de la península Ibérica. En las excavaciones de una sepultura vikinga hallada en la costa sur de Bretaña se encontró un juego de Ajedrez, y en la región francesa de los Vosgos se descubrieron unas piezas del siglo X, de origen escandinavo, que respondían al modelo árabe tradicional. Durante la edad media, las penínsulas Ibérica e Itálica eran las zonas donde más se practicaba. Se jugaba de acuerdo con las normas árabes (descritas en diversos tratados de los que fue traductor y adaptador el rey Alfonso X el Sabio), según las cuales la reina y el alfil son piezas relativamente débiles, que sólo pueden avanzar de casilla en casilla."</p>
+        </div>
+        <div className='right-info'>
+          <h1>Arte</h1>
+        </div>
+      </div>
+      <Footer/>
     </div>
   )
 }

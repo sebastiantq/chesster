@@ -1,16 +1,22 @@
 .reglasPage{
     width: 100%;
     min-height: calc(100vh - 70px);
+    background-color: white;
 }
 
-.reglasPage > h2{
+.reglas-header > h2{
     color: white;
     margin: 20px;
 }
 
-.reglasPage > p{
+.reglas-header > p{
     color: white;
     width: 80%;
     text-align: justify;
     margin: auto;
+}
+.reglas-header{
+    width: 100%;
+    height: 50px;
+    background-color: black;
 }

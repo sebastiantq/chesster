@@ -1,16 +1,60 @@
-.historiaPage{
-    width: 100%;
-    min-height: calc(100vh - 70px);
+.historiaPage {
+  width: 100%;  
+  background-color: white;
+}
+.historiaPage-IMG {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  background-image: url("./ajedrezViejo.jpg");
+  background-position: center;
+  background-size: cover;
+  align-items: center;
+  box-sizing: content-box;
+  
 }
 
-.historiaPage > h2{
-    color: white;
+.titulo {
+  width: 30%;
+  height: 35%;
+  background-color: rgba(255, 245, 245, .3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+
+}
+.titulo > h1 {
+  color: white;
+  text-align: center;
+  font-size: 55px;
+  font-family: "PT Serif";
+}
+.historiaPage-info {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  background-color: white;
+}
+
+.left-info{
+    width: 70%;
     margin: 20px;
+    background-color: white;
+    margin-top: 40px;
+}
+.right-info{
+    width: 30%;
+    margin: 20px;
+    margin-top: 40px;
+    background-color: white;
 }
 
-.historiaPage > p{
-    color: white;
-    width: 80%;
+.left-info > p{
+    color: black;
     text-align: justify;
-    margin: auto;
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
 }

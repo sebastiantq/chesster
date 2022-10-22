@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 // import { useNavigate } from "react-router-dom/dist";
 
@@ -13,11 +12,19 @@ const Inicio = () => {
 
     const state = useSelector(selectNotificacion) // Estado de la notificacion
     const dispatch = useDispatch()
+
+    const [ola, setOla] = useState(false)
     
     const proximamente = () => {
         dispatch(setNotificacion("¡Próximamente!"))
 
         // navigate("/")
+
+        setOla(true)
+
+        setTimeout(() => {
+            setOla(false)
+        }, 500)
     };
 
     return(
@@ -25,7 +32,8 @@ const Inicio = () => {
             <div className="landAction">
                 <img src="./logoInicio.jpeg" alt="ChessTer"/>
                 <h2>ChessTer</h2>
-                <button onClick={proximamente}>Comienza ahora</button>
+                <button onClick={proximamente}>Comienza ahora
+                <div className={ola ? "wave ola" : "wave"}></div></button>
                 <p>¿Qué esperas para empezar a ganar?</p>
             </div>
             <div className="landText">

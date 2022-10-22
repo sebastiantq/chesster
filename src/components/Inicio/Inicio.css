@@ -34,12 +34,26 @@
     font-family: 'Lobster Two';
     font-size: 20px;
     border: none;
+    position: relative;
+    left: 0px;
 }
 
 .landAction > button:hover{
     background-color: gray;
     color: white;
     cursor: pointer;
+    animation: slash 0.3s ease;
+    left: 30px;
+}
+
+@keyframes slash {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 30px;
+    }
 }
 
 .landText{
@@ -63,3 +77,34 @@
     margin-top: 80px;
 }
 
+.wave{
+    border-radius: 50%;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.0);
+    left: 0%;
+    right: 0%;
+}
+
+.ola{
+    animation: ola 0.5s linear;
+}
+
+@keyframes ola {
+    from {
+        width: 0px;
+        height: 0px;
+        left: 0;
+        top: 0;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    to {
+        width: 100vw;
+        height: 100vw;
+        left: -30vw;
+        top: -30vw;
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+}

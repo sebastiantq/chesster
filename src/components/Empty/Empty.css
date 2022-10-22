@@ -1,0 +1,13 @@
+.empty{
+    width: 100%;
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+}
+
+.empty > h4{
+    color: white;
+    font-size: 100px;
+}

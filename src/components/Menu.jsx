@@ -11,10 +11,12 @@ const Menu = () => {
 
     return(
         <div className="menu">
-            <div className="left-menu-div">
-                <img alt='ChessTer' src={ process.env.PUBLIC_URL + "/logoChessTer.jpeg"} className="menu-logo"></img>
-                <h1>ChessTer</h1>
-            </div>
+            <a href="/" className='logo'>
+                <div className="left-menu-div">
+                    <img alt='ChessTer' src={ process.env.PUBLIC_URL + "/logoChessTer.jpeg"} className="menu-logo"></img>
+                    <h1>ChessTer</h1>
+                </div>
+            </a>
             <div>
                 { menuButtons.map(button => (
                     button

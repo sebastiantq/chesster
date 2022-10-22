@@ -7,6 +7,7 @@ import Inicio from './components/Inicio';
 import Informacion from './components/Informacion';
 import Login from './components/Pop/Login';
 import Register from './components/Pop/Register';
+import Empty from './components/Empty';
 
 import Historia from './components/Informacion/Historia/Historia'
 import Reglas from './components/Informacion/Reglas/Reglas'
@@ -31,6 +32,7 @@ const App = () => {
         <Route path='/info/historia' element={<Historia/>}></Route>
         <Route path='/info/reglas' element={<Reglas/>}></Route>
         <Route path='/info/trucos' element={<Trucos/>}></Route>
+        <Route path='*' element={<Empty/>}></Route>
       </Routes>
     </div>
   );

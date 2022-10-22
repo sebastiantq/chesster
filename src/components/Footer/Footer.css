@@ -1,6 +1,6 @@
 .Footer{
     width: 100%;
-    height: 200px;
+    height: 400px;
     background-color: rgb(17, 17, 40);
     display: flex;
 }
@@ -8,11 +8,16 @@
 .footer-left{
     width: 30%;
     height: 100%;
+    align-items: center;
+    justify-content: center;
+    /* display: flex;
+    top: 0; */
 }
 
 .footer-center{
     width: 40%;
     height: 100%;
+    align-items: center;
 }
 
 .footer-right{
@@ -20,22 +25,42 @@
     height: 100%;
 }
 
+.space_div{
+    width: 100%;
+    height: 25%;
+}
+
+.piece-div{
+    width: 100%;
+    height: 30px;
+}
+
+.img-piece{
+    width: 120px;
+    height: 120px;
+}
 
 .phone-icon{
     width: 100%;
-    height: 50%;
-    display: flex;
+    height: 30%;
     justify-content: center;
     position: relative;
+
 }
 
 .title-contact{ 
+    
     font-family: 'Sans serif';        
     color: white;
     text-align: center;
     position: absolute;
-    top: 20px;
+    top: 210px;
     font-size: 23px;
+}
+
+.phone-div, .email-div{
+    width: 100%;
+    display: flex;
 }
 
 .phone-icon > ion-icon{
@@ -47,21 +72,6 @@
     left: 120px;
 }
 
-.phone{
-    font-size: 18px;
-    color: rgb(203, 203, 203);
-    text-align: center;
-    position: absolute;
-    bottom: 10px;
-}
-
-.email-icon{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
 .email-icon > ion-icon{
     color: #FFD700;
     position: absolute;
@@ -69,24 +79,20 @@
     font-size: 23px;
 }
 
-.email{
-    font-size: 18px;
-    color: rgb(203, 203, 203);
-    position: absolute;
-    left: 156px;
-}
-
 .recomendation-title{
-    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 40%;
     position: relative;
+    display: flex;
+    justify-content: space-around;
 }
 
 .help{
     color: white;
     font-size: 23px;
     position: absolute;
-    bottom: 35px;
+    top: 60px;
     font-family: 'Sans serif';
+    text-align: center;
 }

@@ -21,6 +21,14 @@ const Login = ({ setPopup }) => {
         "usuario1": "contraseña"
     }
 
+    const preventSpace = (event) => {
+        console.log("asd")
+        if (event.key === 32) {
+            console.log("ass")
+            event.preventDefault();
+        }
+    }
+
     const login = () => {
         if(usuarios.includes(username) && password === contraseñas[username]){
             console.log("Logueado")
@@ -47,15 +55,18 @@ const Login = ({ setPopup }) => {
         <div className='blur'>
             <div className='login'>
                 <form onSubmit={handleSubmit}>
-                    <a href="/" className='logo'>
-                        <div className="top">
-                            <img src="logoChessTer.jpeg" alt="ChessTer"/>
-                            <h2>ChessTer</h2>
-                        </div>
-                    </a>
+                    <div className='logo'>
+                        <a href="/" className='logo'>
+                            <div className="top">
+                                <img src="/logoChessTer.jpeg" alt="ChessTer"/>
+                                <h2>ChessTer</h2>
+                            </div>
+                        </a>
+                        <button onClick={() => { setPopup("") }}>X</button>
+                    </div>
                     <div className="user">
                         <label htmlFor="username">Usuario/Correo electrónico:</label>
-                        <input onChange={handleChange} type="text" name="username" required/>
+                        <input onChange={() => { handleChange(); preventSpace() }} type="text" name="username" required/>
                     </div>
                     <div className="pass">
                         <label htmlFor="password">Clave:</label>
@@ -66,7 +77,7 @@ const Login = ({ setPopup }) => {
                     <div className="buttons">
                         <button type='submit'>Iniciar sesión</button>
                         <button className='enlace'>Olvidaste tu contraseña</button>
-                        <button className='enlace' onClick={ () => { navigate("/register") } }>Sing Up</button>
+                        <button className='enlace' onClick={ () => { /* navigate("/register") */ setPopup("register") } }>Sing Up</button>
                     </div>
                 </form>
             </div>

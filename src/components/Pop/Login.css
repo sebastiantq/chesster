@@ -1,5 +1,5 @@
 .blur{
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     left: 50%;
@@ -7,6 +7,7 @@
     transform: translate(-50%,-50%);
     background-color: rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(2px);
+    z-index: 10;
 }
 
 .login{
@@ -16,13 +17,27 @@
     top: 50%;
     transform: translate(-50%,-50%);
     width: 40vw;
-    height: calc(50vh + 100px);
+    height: calc(50vh + 120px);
     border-radius: 30px;
 }
 
 .logo{
     text-decoration: none;
     color: black;
+}
+
+.logo > button{
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    background-color: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+
+.logo > button:hover{
+    cursor: pointer;
 }
 
 .top{

@@ -5,8 +5,8 @@
     background-size: cover;
     display: flex;
     padding: 75px 5%;
-    filter: grayscale(60%);
-    filter:sepia(60%);
+    /* filter: grayscale(60%); */
+    /* filter: sepia(60%); */
 }
 
 .landAction{

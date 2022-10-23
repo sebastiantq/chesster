@@ -1,0 +1,24 @@
+.elemento{
+    margin: 20px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.elemento hr{
+    width: 93%;
+    background-color: rgb(57, 57, 57);
+    height: 0.5px;  
+}
+
+.elemento p{
+    width: 100%;
+    margin: 30px 0 ;
+    padding: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+.elemento h3{
+    border: 1px black;
+}

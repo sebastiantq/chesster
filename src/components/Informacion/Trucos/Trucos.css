@@ -1,16 +1,62 @@
 .trucosPage{
     width: 100%;
     min-height: calc(100vh - 70px);
+    background-color: white;
+    display: flex;
 }
-
-.trucosPage > h2{
+.trucos-texto{
+    width: 75%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+.trucos-header {
+    width: 25%;
+    height: 100vh;
+    display: flex;
+    background-image: url("./Trucos.jpg");
+    background-position: center;
+    background-size: cover;
+    justify-content: right;
+    box-sizing: content-box;
+    filter: sepia(80%);
+    
+  }
+  .titulo {
+    width: 200px;
+    height: 100px;
+    background-color: rgba(50, 50, 50, 0.504);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    margin: 30px 0;
+  
+  }
+  .titulo > h1 {
     color: white;
-    margin: 20px;
-}
+    text-align: center;
+    justify-content: right;
+    font-size: 55px;
+    font-family: "PT Serif";
+  }
 
-.trucosPage > p{
-    color: white;
-    width: 80%;
-    text-align: justify;
-    margin: auto;
-}
+  ::-webkit-scrollbar{
+    width: 10px;
+    position: absolute;
+    z-index: 9999;
+  }
+
+  ::-webkit-scrollbar-track{
+    background: none;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background: none;
+    border-radius: 10px;;
+  }
+
+  ::-webkit-scrollbar-thumb:hover{
+    background: #676465;
+  }

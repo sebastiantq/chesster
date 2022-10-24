@@ -8,6 +8,7 @@ function Elemento(props) {
       <p>
         {props.texto}
       </p>
+      <img src={props.img} alt="imagen"  border="0"></img>
       <hr></hr>
     </div>
   );

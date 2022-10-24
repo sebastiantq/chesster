@@ -21,7 +21,7 @@ import './components/Inicio/Inicio.css'
 const App = () => {
   return (
     <div className="App">
-      <link href='https://fonts.googleapis.com/css?family=Lobster Two|PT Serif|Teko|Ibarra Real Nova' rel='stylesheet'></link>
+      <link href='https://fonts.googleapis.com/css?family=Lobster Two|PT Serif|Teko|Ibarra Real Nova|Noto Sans|Noto Serif Display|Raleway' rel='stylesheet'></link>
       <Menu/>
       <Routes>
         <Route path='/' element={<Inicio/>}></Route>

@@ -2,6 +2,9 @@
   width: 100%;  
   background-color: white;
 }
+
+/* parte superior */
+
 .historiaPage-IMG {
   width: 100%;
   height: 50vh;
@@ -30,6 +33,9 @@
   font-size: 55px;
   font-family: "PT Serif";
 }
+
+/* Parte inferior */
+
 .historiaPage-info {
   width: 100%;
   min-height: 50vh;
@@ -43,6 +49,104 @@
     background-color: white;
     margin-top: 40px;
 }
+
+.left-info > h1{
+  text-align: center;
+  font-size: 55px;
+}
+
+.introduction-info{
+  color: black;
+  text-align: center;
+  font-family: 'Noto Sans';
+  margin-top: 30px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 30px;
+}
+
+.left-info > hr{
+  width: 90%;
+  margin: auto;
+}
+
+.img-indo-div{
+  width: 650px;
+  margin: auto;
+}
+
+.img-valley{
+  width: 650px;
+  margin-top: 30px;
+  margin-bottom: 8px;
+  cursor: crosshair;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.img-indo-div > p{
+  text-align: justify;
+  font-size: small;
+  font-family:'Noto Sans', sans-serif;;
+  color: rgb(86, 91, 91);
+}
+
+.div-paragraph-info{
+  width: 950px;
+  margin: auto;
+}
+
+.div-paragraph-info > h1{
+  margin-top: 40px;
+  text-align: center;
+}
+
+.info-p{
+  margin-top: 40px;
+  text-align: justify;
+  font-size: 14px;
+  font-family: 'Noto Sans';
+}
+
+.div-paragraph-info > hr{
+  margin: auto;
+  width: 80%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-color: goldenrod;
+}
+
+.curios-data-div{
+  margin: auto;
+  width: 80%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comilla-p{
+  margin-right: 15px;
+  font-size: 150px;
+  font-family: 'Noto Serif Display';
+  color: goldenrod;
+}
+
+.curious-data{
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.copyright-p{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: justify;
+  font-size: 12px;
+  font-family: 'Noto Sans';
+
+}
+/* Informacion derecha, apartado del arte */
 .right-info{
     width: 30%;
     margin: 20px;
@@ -50,11 +154,17 @@
     background-color: white;
 }
 
-.left-info > p{
-    color: black;
-    text-align: justify;
-    margin-top: 50px;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 10%;
+.img-right-div{
+  margin: auto;
+  margin-top: 50px;
+}
+
+.img-right{
+  width: 350px;
+}
+
+.img-description{
+  font-size: 13px;
+  color: rgb(81, 84, 84);
+  font-family: 'Noto Sans';
 }

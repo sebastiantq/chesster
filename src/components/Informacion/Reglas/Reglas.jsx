@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../../Footer";
 import "./Reglas.css";
-import Elemento from "../elemento/Elemento";
+import Elemento from "../elemento/Elemento2";
 
 function Reglas() {
   return (

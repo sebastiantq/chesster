@@ -10,7 +10,7 @@ function Trucos() {
       <div className="trucosPage">
         <div className="trucos-header">
           <div className="titulo_trucos">
-            <h1>Trucos</h1>
+            <h1>Jugadas</h1>
             <Link to="/info">
               <div className="div-icono">
                 <ion-icon name="chevron-back-outline"></ion-icon>

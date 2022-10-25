@@ -1,13 +1,21 @@
 .blur_img{
     position: fixed;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh + 10px);
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
     background-color: rgba(0, 0, 0, 0.846);
     backdrop-filter: blur(2px);
     z-index: 10;
+}
+
+.out-modal-button{
+    background-color: transparent;
+    position: fixed;
+    width: 100vw;
+    height: calc(100vh + 10px);
+    left: 0px;
 }
 
 .div_modal_container{
@@ -21,6 +29,8 @@
 .div_modal_container > button{
     width: 20px;
     height: 20px;
+    background-color: transparent;
+    color: white;
 }
 
 .div_modal_container button:hover{

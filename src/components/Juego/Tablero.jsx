@@ -9,7 +9,7 @@ class Tablero extends React.Component{
                     <h1>00:00</h1>
                 </div>
                 <div className="tablero-inferior">
-                    <img alt="Tablero de juego" src="./tablero.jpeg"></img>
+                    <img alt="Tablero de juego" src="./tablero.png"></img>
                 </div>
             </div>
         );

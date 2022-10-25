@@ -24,7 +24,7 @@
     
   }
   .titulo_trucos {
-    width: 270px;
+    width: 300px;
     height: 100px;
     background-color: rgba(50, 50, 50, 0.504);
     display: flex;
@@ -40,4 +40,26 @@
     justify-content: right;
     font-size: 55px;
     font-family: "PT Serif";
+  }
+
+  .div-likes{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 80px;
+    width: 50%;
+  }
+
+  .div-likes > button{
+    width: 35px;
+    height: 35px;
+  }
+
+  .div-likes > button > ion-icon{ 
+    font-size: 20px;
+  }
+
+  .div-likes button:hover{
+    background-color: black;
+    color: white;
   }

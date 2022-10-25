@@ -1,10 +1,10 @@
 import React from "react";
 import Footer from "../../Footer";
-import "./Trucos.css";
+import "./Jugadas.css";
 import Truco from "../elemento/Elemento";
 import { Link } from "react-router-dom";
 
-function Trucos() {
+function Jugadas() {
   return (
     <div>
       <div className="trucosPage">
@@ -51,4 +51,4 @@ function Trucos() {
   );
 }
 
-export default Trucos;
+export default Jugadas;

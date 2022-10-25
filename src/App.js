@@ -11,7 +11,7 @@ import Empty from './components/Empty';
 
 import Historia from './components/Informacion/Historia/Historia'
 import Reglas from './components/Informacion/Reglas/Reglas'
-import Trucos from './components/Informacion/Trucos/Trucos'
+import Jugadas from './components/Informacion/Jugadas/Jugadas'
 
 import './App.css';
 import './components/Menu/Menu.css'
@@ -31,7 +31,7 @@ const App = () => {
         <Route path='/info' element={<Informacion/>}></Route>
         <Route path='/info/historia' element={<Historia/>}></Route>
         <Route path='/info/reglas' element={<Reglas/>}></Route>
-        <Route path='/info/trucos' element={<Trucos/>}></Route>
+        <Route path='/info/jugadas' element={<Jugadas/>}></Route>
         <Route path='*' element={<Empty/>}></Route>
       </Routes>
     </div>

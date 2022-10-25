@@ -25,8 +25,8 @@ function Informacion() {
               img="./ajedrezReglas.jpg">
         </Card>
       </Link>
-      <Link to="/info/trucos">
-        <Card titulo="Trucos"
+      <Link to="/info/jugadas">
+        <Card titulo="Jugadas"
               numero="03"
               img="./trucoss.jpg">
         </Card>

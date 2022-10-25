@@ -10,6 +10,14 @@
     z-index: 10;
 }
 
+.out-modal-button{
+    background-color: transparent;
+    position: fixed;
+    width: 100vw;
+    height: calc(100vh + 10px);
+    left: 0px;
+}
+
 .div_modal_container{
     width: 80%;
     height: 200px;
@@ -21,6 +29,8 @@
 .div_modal_container > button{
     width: 20px;
     height: 20px;
+    background-color: transparent;
+    color: white;
 }
 
 .div_modal_container button:hover{

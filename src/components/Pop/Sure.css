@@ -1,0 +1,89 @@
+.blur{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(2px);
+    z-index: 10;
+}
+
+.login-sure{
+    position: absolute;
+    background-color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 40vw;
+    height: calc(50vh + 120px);
+    border-radius: 30px;
+}
+
+.login-sure > hr{
+    margin: auto;
+    width: 80%;
+}
+
+.logo-sure{
+    text-decoration: none;
+    color: black;
+}
+
+.logo-sure > button{
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    background-color: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+
+.top-div{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.top-div > img{
+    margin-right: 5px;
+    width: 30px;
+}
+
+.mid-div{
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mid-div > p{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 40px;
+    font-family: 'Lobster two';
+}
+
+.div-buttons{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-buttons > button{
+    height: 40px;
+    width: 150px;
+    margin: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}
+
+.div-buttons button:hover{
+    background-color: rgb(65, 63, 63);
+}

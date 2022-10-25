@@ -1,22 +1,22 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 
-import { useDispatch } from "react-redux";
-import { setNotificacion } from "../../store/notificacion"
-import { setLogueado } from "../../store/sesion"
+import Sure from "../Pop/Sure";
 
 const SesionButton = (props) => {
     const { color } = props
-
-    const dispatch = useDispatch()
-
-    const logout = () => {
-        dispatch(setLogueado(false))
-        dispatch(setNotificacion("Se ha cerrado sesión"))
-    }
     
+    const [popup, setPopup] = useState("") 
+    
+    const middleware = () => {
+        setPopup("sure")
+    }
+
     return(
-        <Link onClick={logout} to={"/"} className={"menu-button " + color}>Cerrar sesión</Link>
+        <>
+        <Link onClick={middleware} /*to={"/"}*/ className={"menu-button " + color}>Cerrar sesión</Link>
+        { popup === "sure" && <Sure setPopup={ setPopup }/> }
+        </>
     );
 }
 

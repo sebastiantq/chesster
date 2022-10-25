@@ -7,13 +7,16 @@ import { setLogueado } from "../../store/sesion";
 
 import "./Sure.css";
 import 'animate.css';
+import { useNavigate } from "react-router-dom";
 
 const Sure = ({ setPopup }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate()
 
   const logout = () => {
     dispatch(setLogueado(false));
     dispatch(setNotificacion("Se ha cerrado sesión"));
+    navigate("/")
   };
 
   return (
@@ -38,7 +41,8 @@ const Sure = ({ setPopup }) => {
         </div>
         <div className="div-buttons">
             <button onClick={() => {
-                setPopup("");logout();
+                setPopup("");
+                logout();
             }}>Si</button>
             <button onClick={() => {
               setPopup("");

@@ -1,11 +1,17 @@
 import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch } from "react-redux";
+// import { useNavigate } from "react-router-dom/dist";
+
+import { setNotificacion } from "../../store/notificacion"
+import { setLogueado } from "../../store/sesion"
 
 import "./Login.css"
 
 const Login = ({ setPopup }) => {
     const navigate = useNavigate()
+    const dispatch = useDispatch()
 
     const [inputs, setInputs] = useState({
         username: "",
@@ -16,27 +22,32 @@ const Login = ({ setPopup }) => {
 
     const [estadoLogin, setEstadoLogin] = useState("")
 
-    const usuarios = ["usuario1"]
+    const usuarios = ["sebastianh", "sebastiant", "juan"]
     const contraseñas = {
-        "usuario1": "contraseña"
-    }
-
-    const preventSpace = (event) => {
-        console.log("asd")
-        if (event.key === 32) {
-            console.log("ass")
-            event.preventDefault();
-        }
+        "sebastianh": "sebastianh",
+        "sebastiant": "sebastiant",
+        "juan": "juan"
     }
 
     const login = () => {
         if(usuarios.includes(username) && password === contraseñas[username]){
-            console.log("Logueado")
-            navigate("/")
+            // console.log("Logueado")
+
+            if (username === "sebastianh"){
+                dispatch(setNotificacion("Login exitoso, Doctor Sebastián"))
+            }else if (username === "juan"){
+                dispatch(setNotificacion("Bienvenido de nuevo, Dr. Ignacio"))
+            }else{
+                dispatch(setNotificacion("¡Te has logueado con exito! :)"))
+            }
+
+            dispatch(setLogueado(true))
+            setPopup("")
+            navigate("/jugar")
         }else{
-            console.log("User: " + username + " & pass: " + password + ", db: " + contraseñas[username])
-            console.log("1. " + usuarios.includes(username))
-            console.log("2. " + password === contraseñas[username])
+            // console.log("User: " + username + " & pass: " + password + ", db: " + contraseñas[username])
+            // console.log("1. " + usuarios.includes(username))
+            // console.log("2. " + password === contraseñas[username])
             setEstadoLogin("Usuario y/o contraseña incorrecta")
         }   
     }
@@ -45,6 +56,10 @@ const Login = ({ setPopup }) => {
         e.preventDefault()
 
         login()
+    }
+
+    const handleSpace = (event) => { // No espacios en username y email
+      if (event.code === "Space") event.preventDefault()
     }
 
     const handleChange = (e) => {
@@ -64,15 +79,16 @@ const Login = ({ setPopup }) => {
                         </a>
                         <button onClick={() => { setPopup("") }}>X</button>
                     </div>
+                    <hr/>
                     <div className="user">
                         <label htmlFor="username">Usuario/Correo electrónico:</label>
-                        <input onChange={() => { handleChange(); preventSpace() }} type="text" name="username" required/>
+                        <input onKeyDown={handleSpace} onChange={handleChange} type="text" name="username" required/>
                     </div>
                     <div className="pass">
                         <label htmlFor="password">Clave:</label>
                         <input onChange={handleChange} type="password" name="password" required/>
                     </div>
-                    <p>Estado: {estadoLogin}</p>
+                    <p>{estadoLogin}</p>
                     <br />
                     <div className="buttons">
                         <button type='submit'>Iniciar sesión</button>

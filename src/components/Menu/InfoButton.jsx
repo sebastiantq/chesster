@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 // import { useDispatch } from "react-redux";
 // import { setNotificacion } from "../../store/notificacion"
 
-const InfoButton = () => {
+const InfoButton = (props) => {
+    const { color } = props
     // const dispatch = useDispatch()
 
     /* const proximamente = () => {
@@ -12,7 +13,7 @@ const InfoButton = () => {
     }; */
     
     return(
-        <Link to={"/info"} /* onClick={proximamente} */ className="menu-button white-button">Info</Link>
+        <Link to={"/info"} /* onClick={proximamente} */ className={"menu-button " + color}>Info</Link>
     );
 }
 

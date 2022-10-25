@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-class InicioButton extends React.Component{
-    render(){
-        return(
-            <Link to={"/"} className="menu-button black-button" >Inicio</Link>
-        );
-    }
+function InicioButton(props) {
+    const { color } = props
+
+  return (
+    <Link to={"/"} className={"menu-button " + color} >Inicio</Link>
+  )
 }
 
 export default InicioButton;

@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="info-left-div">
               <p className="developers">Desarrolladores:</p>
               <ul className="list-style">
-                <li>Sebastián Tobar</li>
+                <li>Sebastian Tobar Q.</li>
                 <li>Juan Ignacio Gándara</li>
                 <li>Sebastián Hernández</li>
               </ul>
@@ -64,7 +64,7 @@ const Footer = () => {
                 </div>
                 <div className="phone-email-div">
                   <ion-icon name="mail-outline"></ion-icon>
-                  <p>chesster@gmail.com</p>
+                  <p>contacto@chesster.com</p>
                 </div>
               </div>
             </div>

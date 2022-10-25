@@ -52,6 +52,13 @@ const Login = ({ setPopup }) => {
         }   
     }
 
+    const passwordForgot = (e) => {
+        e.preventDefault()
+
+        setPopup("")
+        dispatch(setNotificacion("¡Próximamente!"))
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault()
 
@@ -92,7 +99,7 @@ const Login = ({ setPopup }) => {
                     <br />
                     <div className="buttons">
                         <button type='submit'>Iniciar sesión</button>
-                        <button className='enlace'>Olvidaste tu contraseña</button>
+                        <button className='enlace' onClick={ passwordForgot }>Olvidaste tu contraseña</button>
                         <button className='enlace' onClick={ () => { /* navigate("/register") */ setPopup("register") } }>Sing Up</button>
                     </div>
                 </form>

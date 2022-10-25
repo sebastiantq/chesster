@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Modal_Button.css"
-import Modal_Image from "./Modal_Image";
+import ModalImage from "./ModalImage";
 
-const Modal_Button = (props) => {
+const ModalButton = (props) => {
 
     const [popup, setPopup] = useState("") 
 
@@ -36,9 +36,9 @@ const Modal_Button = (props) => {
                 <img src={props.src_img} alt={props.alt_img} className="Img-Modal"></img>
             </Link>
             <p className="Description">{props.img_description}</p>
-            { popup === "modal" && <Modal_Image src_img={props.src_img} alt="Img" parrafo={props.img_description} setPopup={ setPopup }/> }
+            { popup === "modal" && <ModalImage src_img={props.src_img} alt="Img" parrafo={props.img_description} setPopup={ setPopup }/> }
         </div>
     );
 }
 
-export default Modal_Button;
+export default ModalButton;

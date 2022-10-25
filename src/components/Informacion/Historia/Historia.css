@@ -12,22 +12,45 @@
   background-image: url("./ajedrezViejo.jpg");
   background-position: center;
   background-size: cover;
-  align-items: center;
   box-sizing: content-box;
   
 }
 
-.titulo {
-  width: 30%;
-  height: 35%;
+.div-icono{
+  width: 90px;
+  height: 80px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.div-icono > ion-icon{
+  color: white;
+  font-size: 60px;
+}
+
+.div-icono ion-icon:hover{
+  color: black;
+}
+
+.tittle-container{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  box-sizing: content-box;
+}
+
+.titulo-historia {
+  width: 40%;
+  height: 30%;
   background-color: rgba(255, 245, 245, .3);
   display: flex;
   align-items: center;
   justify-content: center;
   backdrop-filter: blur(5px);
-
 }
-.titulo > h1 {
+.titulo-historia > h1 {
   color: white;
   text-align: center;
   font-size: 55px;
@@ -84,6 +107,8 @@
   border-radius: 4px;
   padding: 8px;
 }
+
+
 
 .img-indo-div > p{
   text-align: justify;
@@ -161,10 +186,15 @@
 
 .img-right{
   width: 350px;
+  box-shadow: 5px 5px 5px black;
+  cursor: pointer;
 }
 
 .img-description{
   font-size: 13px;
   color: rgb(81, 84, 84);
   font-family: 'Noto Sans';
+  margin-top: 10px;
 }
+
+

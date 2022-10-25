@@ -3,12 +3,22 @@ import React from "react";
 import Footer from "../../Footer";
 import "./Historia.css";
 
+import Modal_Button from "./Modal_Images/Modal_Button";
+import { Link } from "react-router-dom";
+
 function Historia() {
   return (
     <div className="historiaPage">
       <div className="historiaPage-IMG">
-        <div className="titulo">
-          <h1>Origen</h1>
+        <div className="tittle-container">
+          <div className="titulo-historia">
+            <Link to="/info">
+              <div className="div-icono">
+                <ion-icon name="arrow-back-circle-outline"></ion-icon>
+              </div>
+            </Link>
+            <h1>Origen</h1>
+          </div>
         </div>
       </div>
       <div className="historiaPage-info">
@@ -105,30 +115,12 @@ function Historia() {
         </div>
         <div className="right-info">
           <h1>Arte</h1>
-          <div className="img-right-div">
-            <img src={"/primercampeonato.jpg"} alt={"first"} className="img-right"></img>
-            <p className="img-description">Primer campeonato mundial de ajedrez, 1886</p>
-          </div>
-          <div className="img-right-div">
-            <img src={"/primercampeon.png"} alt={"first"} className="img-right"></img>
-            <p className="img-description">Primer Campeón mundial de ajedrez, Wilhelm Steinitz 1836-1900</p>
-          </div>
-          <div className="img-right-div">
-            <img src={"/imperio-gupta.jpg"} alt={"first"} className="img-right"></img>
-            <p className="img-description">Se teoriza que es de origen Indú</p>
-          </div>
-          <div className="img-right-div">
-            <img src={"/persas.jpg"} alt={"first"} className="img-right"></img>
-            <p className="img-description">Partida de ajedrez en la corte persa</p>
-          </div>
-          <div className="img-right-div">
-            <img src={"/war2chess.jpg"} alt={"first"} className="img-right"></img>
-            <p className="img-description">Soldados en la segunda guerra mundial</p>
-          </div>
-          <div className="img-right-div">
-            <img src={"/gambito.jpg"} alt={"first"} className="img-right"></img>
-            <p className="img-description">El ajedrez ha inspirado hasta series y películas</p>
-          </div>
+          <Modal_Button src_img="/primercampeonato.jpg" alt_img="first" img_description="Primer campeonato mundial de ajedrez, 1886" />
+          <Modal_Button src_img="/primercampeon.png" alt_img="first" img_description="Primer Campeón mundial de ajedrez, Wilhelm Steinitz 1836-1900" />
+          <Modal_Button src_img="/imperio-gupta.jpg" alt_img="first" img_description="Se teoriza que es de origen Indú" />
+          <Modal_Button src_img="/persas.jpg" alt_img="first" img_description="Partida de ajedrez en la corte persa" />
+          <Modal_Button src_img="/war2chess.jpg" alt_img="first" img_description="Soldados en la segunda guerra mundial" />
+          <Modal_Button src_img="/gambito_de_dama.jpeg" alt_img="first" img_description="El ajedrez ha inspirado hasta series y películas" />
         </div>
       </div>
       <Footer />

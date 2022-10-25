@@ -1,13 +1,35 @@
 .empty{
     width: 100%;
     height: calc(100vh - 50px);
-    display: flex;
+    display:    flex;
     align-items: center;
     justify-content: space-around;
     background-color: black;
 }
 
-.empty > h4{
-    color: white;
-    font-size: 100px;
+.center-div{
+    width: 50%;
+    height: 50%;  
 }
+
+.center-div > h4{
+    color: rgb(255, 255, 255);
+    font-size: 150px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-shadow: blue 0 -2px;
+}
+
+.center-div > p{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin: auto;
+    font-family: 'Teko';    
+}
+
+.img-div{
+    margin: auto;
+    width: 20%;
+    height: 20%;
+}
+    

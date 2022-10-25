@@ -1,0 +1,22 @@
+
+.Button-Modal-div{
+    margin: auto;
+    margin-top: 50px;
+}
+
+.Button_link{
+    border: 0px;
+}
+
+.Img-Modal{
+    width: 350px;
+    box-shadow: 5px 5px 5px black;
+    cursor: pointer;
+  }
+
+  .Description{
+    font-size: 13px;
+    color: rgb(81, 84, 84);
+    font-family: 'Noto Sans';
+    margin-top: 10px;
+  }

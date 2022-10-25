@@ -36,7 +36,7 @@ const Modal_Button = (props) => {
                 <img src={props.src_img} alt={props.alt_img} className="Img-Modal"></img>
             </Link>
             <p className="Description">{props.img_description}</p>
-            { popup === "modal" && <Modal_Image src_img={props.src_img} alt="Img" parrafo={props.img_description} setPopup={ setPopup }/> }
+            { popup === "modal" && <Modal_Image src_img={props.src_img} alt="Img" parrafo={props.paragraph} title={props.title} setPopup={ setPopup }/> }
         </div>
     );
 }

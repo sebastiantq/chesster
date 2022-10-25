@@ -2,14 +2,20 @@ import React from "react";
 import Footer from "../../Footer";
 import "./Trucos.css";
 import Truco from "../elemento/Elemento";
+import { Link } from "react-router-dom";
 
 function Trucos() {
   return (
     <div>
       <div className="trucosPage">
         <div className="trucos-header">
-          <div className="titulo">
+          <div className="titulo_trucos">
             <h1>Trucos</h1>
+            <Link to="/info">
+              <div className="div-icono">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+              </div>
+            </Link>
           </div>
         </div>
         <div className="trucos-texto">

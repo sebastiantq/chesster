@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../../Footer";
 import "./Reglas.css";
 import Elemento from "../elemento/Elemento2";
+import { Link } from "react-router-dom";
 
 function Reglas() {
   return (
@@ -33,8 +34,13 @@ Tu primer movimiento es crucial y, como consejo, debe responder a una estrategia
           ></Elemento>
         </div>
         <div className="reglas-header">
-          <div className="titulo">
+          <div className="titulo_reglas">
             <h1>Reglas</h1>
+            <Link to="/info">
+              <div className="div-icono">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

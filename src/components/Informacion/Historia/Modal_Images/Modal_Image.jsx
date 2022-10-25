@@ -13,7 +13,12 @@ function Modal_Image(props,{setPopup}){
                     <img src={props.src_img} alt={props.alt_img} className="img"></img>
                 </div>
                 <div className="bot_modal">
-                    <p className='paragraph'>{props.parrafo}</p>
+                    <div className="title_modal_div">
+                        <p className='title_modal'>{props.title}</p>
+                    </div>
+                    <div className="paragraph_div">
+                        <p className='paragraph'>{props.parrafo}</p>
+                    </div>  
                 </div>
             </div>
         </div>

@@ -14,7 +14,7 @@ function Historia() {
           <div className="titulo-historia">
             <Link to="/info">
               <div className="div-icono">
-                <ion-icon name="arrow-back-circle-outline"></ion-icon>
+                <ion-icon name="chevron-back-outline"></ion-icon>
               </div>
             </Link>
             <h1>Origen</h1>
@@ -119,7 +119,7 @@ function Historia() {
           <Modal_Button src_img="/primercampeon.png" alt_img="first" img_description="Primer Campeón mundial de ajedrez, Wilhelm Steinitz 1836-1900" />
           <Modal_Button src_img="/imperio-gupta.jpg" alt_img="first" img_description="Se teoriza que es de origen Indú" />
           <Modal_Button src_img="/persas.jpg" alt_img="first" img_description="Partida de ajedrez en la corte persa" />
-          <Modal_Button src_img="/war2chess.jpg" alt_img="first" img_description="Soldados en la segunda guerra mundial" />
+          <Modal_Button src_img="/war2chess.jpg" alt_img="first" img_description="Soldados en la segunda guerra mundial" title="Soldados Jugando Ajedrez" paragraph="Durante la Segunda Guerra Mundial , los prisioneros de guerra alemanes pasaron gran parte de su tiempo jugando al ajedrez.Los presos de los campos de concentración alemanes hicieron juegos de ajedrez de cera de la vela y de la madera ." />
           <Modal_Button src_img="/gambito_de_dama.jpeg" alt_img="first" img_description="El ajedrez ha inspirado hasta series y películas" />
         </div>
       </div>

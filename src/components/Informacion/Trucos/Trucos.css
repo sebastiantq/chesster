@@ -23,8 +23,8 @@
     filter: sepia(80%);
     
   }
-  .titulo {
-    width: 200px;
+  .titulo_trucos {
+    width: 270px;
     height: 100px;
     background-color: rgba(50, 50, 50, 0.504);
     display: flex;
@@ -34,7 +34,7 @@
     margin: 30px 0;
   
   }
-  .titulo > h1 {
+  .titulo_trucos > h1 {
     color: white;
     text-align: center;
     justify-content: right;

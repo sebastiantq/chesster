@@ -21,12 +21,12 @@ const Register = ({ setPopup }) => {
   const register = () => {
     // Aqui se deben verificar todos los campos
 
-    if (email === "") {
-      setEstadoRegister("El email no puede estar vacio")
+    if (username === "" || email === "" || password === "" || cpassword === "") {
+      setEstadoRegister("Hay un campo vacío")
       return
     }
 
-    if (["sebastian", "juan"].includes(username)) {
+    if (["sebastianh", "sebastiant", "juan"].includes(username)) {
       setEstadoRegister("El usuario ya se encuentra registrado")
       return
     }

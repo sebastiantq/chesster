@@ -41,22 +41,3 @@
     font-size: 55px;
     font-family: "PT Serif";
   }
-
-  ::-webkit-scrollbar{
-    width: 10px;
-    position: absolute;
-    z-index: 9999;
-  }
-
-  ::-webkit-scrollbar-track{
-    background: none;
-  }
-
-  ::-webkit-scrollbar-thumb{
-    background: none;
-    border-radius: 10px;;
-  }
-
-  ::-webkit-scrollbar-thumb:hover{
-    background: #676465;
-  }

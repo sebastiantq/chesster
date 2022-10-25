@@ -1,12 +1,11 @@
 import React from 'react'
 import "./Modal_Images.css"
 
-function Modal_Image(props,{setPopup}){
-
+function ModalImage(props){
     return (
         <div className='blur_img'>
             <div className="div_modal_container">
-                <button onClick={() => { setPopup("") }}>X</button>
+                <button onClick={() => { props.setPopup("") }}>X</button>
             </div>
             <div className='div_img_modal'>
                 <div className="top_img_div">
@@ -25,4 +24,4 @@ function Modal_Image(props,{setPopup}){
     )
 }
 
-export default Modal_Image
+export default ModalImage

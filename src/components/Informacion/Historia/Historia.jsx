@@ -3,7 +3,7 @@ import React from "react";
 import Footer from "../../Footer";
 import "./Historia.css";
 
-import Modal_Button from "./Modal_Images/Modal_Button";
+import ModalButton from "./Modal_Images/ModalButton";
 import { Link } from "react-router-dom";
 
 function Historia() {
@@ -115,12 +115,21 @@ function Historia() {
         </div>
         <div className="right-info">
           <h1>Arte</h1>
+<<<<<<< HEAD
           <Modal_Button src_img="/primercampeonato.jpg" alt_img="first" img_description="Primer campeonato mundial de ajedrez, 1886" />
           <Modal_Button src_img="/primercampeon.png" alt_img="first" img_description="Primer Campeón mundial de ajedrez, Wilhelm Steinitz 1836-1900" />
           <Modal_Button src_img="/imperio-gupta.jpg" alt_img="first" img_description="Se teoriza que es de origen Indú" />
           <Modal_Button src_img="/persas.jpg" alt_img="first" img_description="Partida de ajedrez en la corte persa" />
           <Modal_Button src_img="/war2chess.jpg" alt_img="first" img_description="Soldados en la segunda guerra mundial" title="Soldados Jugando Ajedrez" paragraph="Durante la Segunda Guerra Mundial , los prisioneros de guerra alemanes pasaron gran parte de su tiempo jugando al ajedrez.Los presos de los campos de concentración alemanes hicieron juegos de ajedrez de cera de la vela y de la madera ." />
           <Modal_Button src_img="/gambito_de_dama.jpeg" alt_img="first" img_description="El ajedrez ha inspirado hasta series y películas" />
+=======
+          <ModalButton src_img="/primercampeonato.jpg" alt_img="first" img_description="Primer campeonato mundial de ajedrez, 1886" />
+          <ModalButton src_img="/primercampeon.png" alt_img="first" img_description="Primer Campeón mundial de ajedrez, Wilhelm Steinitz 1836-1900" />
+          <ModalButton src_img="/imperio-gupta.jpg" alt_img="first" img_description="Se teoriza que es de origen Indú" />
+          <ModalButton src_img="/persas.jpg" alt_img="first" img_description="Partida de ajedrez en la corte persa" />
+          <ModalButton src_img="/war2chess.jpg" alt_img="first" img_description="Soldados en la segunda guerra mundial" />
+          <ModalButton src_img="/gambito_de_dama.jpeg" alt_img="first" img_description="El ajedrez ha inspirado hasta series y películas" />
+>>>>>>> 5e8184dd84c480f9374e2017fbb1348ca634e316
         </div>
       </div>
       <Footer />

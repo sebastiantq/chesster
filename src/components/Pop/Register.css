@@ -21,6 +21,14 @@
     border-radius: 30px;
 }
 
+.register > form > hr{
+    height: 1px;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 30px;
+    background-color: black;
+}
+
 .logo{
     text-decoration: none;
     color: black;
@@ -30,7 +38,7 @@
     position: absolute;
     right: 40px;
     top: 40px;
-    background-color: none;
+    background-color: transparent;
     border: none;
     width: 30px;
     height: 30px;
@@ -57,7 +65,7 @@
 }
 
 .user, .email, .pass{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .user, .email, .pass{

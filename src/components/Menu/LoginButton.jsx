@@ -8,7 +8,9 @@ import { Link } from "react-router-dom";
 import Login from "../Pop/Login";
 import Register from "../Pop/Register"
 
-const LoginButton = () => {
+const LoginButton = (props) => {
+    const { color } = props
+
     const [popup, setPopup] = useState("") 
 
     // const dispatch = useDispatch()
@@ -44,7 +46,7 @@ const LoginButton = () => {
     
     return(
         <>
-            <Link onClick={login} className="menu-button white-button">Login</Link>
+            <Link onClick={login} className={"menu-button " + color}>Login</Link>
         
             { popup === "login" && <Login setPopup={ setPopup }/> }
             { popup === "register" && <Register setPopup={ setPopup }/> }

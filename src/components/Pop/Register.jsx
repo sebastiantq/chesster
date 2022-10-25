@@ -7,6 +7,8 @@ import "./Register.css"
 const Register = ({ setPopup }) => {
   // const navigate = useNavigate()
 
+  const [estadoRegister, setEstadoRegister] = useState("")
+
   const [inputs, setInputs] = useState({
       username: "",
       email: "",
@@ -14,17 +16,37 @@ const Register = ({ setPopup }) => {
       cpassword: ""
   })
 
-  // const { username, password } = inputs
+  const { username, email, password, cpassword } = inputs
 
-  // const usuarios = ["usuario1"]
-  // const contraseñas = {
-  //     "usuario1": "contraseña"
-  // }
+  const register = () => {
+    // Aqui se deben verificar todos los campos
 
-  const preventSpace = (event) => {
-    if (event.key === 32) {
-        event.preventDefault();
+    if (email === "") {
+      setEstadoRegister("El email no puede estar vacio")
+      return
     }
+
+    if (["sebastian", "juan"].includes(username)) {
+      setEstadoRegister("El usuario ya se encuentra registrado")
+      return
+    }
+
+    if (password !== cpassword) {
+      setEstadoRegister("Las contraseñas no coinciden")
+      return
+    }
+
+    setPopup("login")
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    register()
+  }
+
+  const handleSpace = (event) => { // No espacios en username y email
+    if (event.code === "Space") event.preventDefault()
   }
 
   const handleChange = (e) => {
@@ -34,7 +56,7 @@ const Register = ({ setPopup }) => {
   return (
     <div className='blur'>
       <div className='register'>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className='logo'>
             <a href="/" className='logo'>
               <div className="top">
@@ -44,13 +66,14 @@ const Register = ({ setPopup }) => {
             </a>
             <button onClick={() => { setPopup("") }}>X</button>
           </div>
+          <hr/>
           <div className="user">
             <label htmlFor="username">Usuario:</label>
-            <input type="text" onChange={() => { handleChange(); preventSpace() }} name="username"/>
+            <input type="text" onKeyDown={handleSpace} onChange={handleChange} name="username"/>
           </div>
           <div className="email">
             <label htmlFor="email">Correo electrónico:</label>
-            <input type="text" onChange={() => { handleChange(); preventSpace() }} name="email"/>
+            <input type="text" onKeyDown={handleSpace} onChange={handleChange} name="email"/>
           </div>
           <div className="pass">
             <label htmlFor="password">Clave:</label>
@@ -60,6 +83,8 @@ const Register = ({ setPopup }) => {
             <label htmlFor="cpassword">Confirma tu clave:</label>
             <input type="password" onChange={handleChange} name="cpassword"/>
           </div>
+          <p>{estadoRegister}</p>
+          <br />
           <div className="buttons">
             <button type='submit'>Registrarse</button>
             <button className="enlace" onClick={ () => { /* navigate("/login") */ setPopup("login") } }>Ya tengo una cuenta</button>

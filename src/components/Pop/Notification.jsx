@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react';
 
 import { useDispatch /*, useSelector */ } from "react-redux";
 // import { useNavigate } from "react-router-dom/dist";
@@ -14,6 +15,12 @@ const Notification = (props) => {
   const close = () => {
     dispatch(setNotificacion(null))
   }
+
+  useEffect(() => {
+    setTimeout(() => {
+      close()
+    }, 5000)
+  }, [])
 
   return (
     <div id="notif" className="not">

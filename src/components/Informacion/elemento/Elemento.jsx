@@ -22,8 +22,8 @@ function Elemento(props) {
       <p>{props.texto}</p>
       <img src={props.img} alt="imagen" border="0"></img>
       <div className="div-likes">
-        <div className="show-info">
-          <p className={"data " + (brinco && "animate__animated animate__bounce")}>{contador1}</p>
+        <div className="show-info"> 
+          <p className={"data " + (brinco && "animate__animated animate__bounce")}>{contador1 + " Likes!"}</p>
         </div>
         <button onClick={contador_1}>
           <ion-icon name="thumbs-up-outline"></ion-icon>

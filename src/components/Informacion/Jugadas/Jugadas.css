@@ -11,6 +11,15 @@
     flex-direction: column;
     overflow: auto;
 }
+
+.trucos-texto {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.trucos-texto::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
 .trucos-header {
     width: 25%;
     height: 100vh;

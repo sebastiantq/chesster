@@ -3,10 +3,10 @@ import { BehaviorSubject } from "rxjs"
 
 // let promotion = "rnb2bnr/pppPkppp/8/4p3/7q/8/PPPP1PPP/RNBQKBNR w KQ - 1 5"
 // let staleMate = "4k3/4P3/4K3/8/8/8/8/8 b - - 0 78"
-// let checkMate = "rnb1kbnr/pppp1ppp/8/4p3/5PPq/8/PPPPP2P/RNBQKBNR w KQkq - 1 3"
+let checkMate = "rnb1kbnr/pppp1ppp/8/4p3/5PPq/8/PPPPP2P/RNBQKBNR w KQkq - 1 3"
 // let insuficcientMaterial = "k7/8/n7/8/8/8/8/7K b - - 0 1"
 
-let semilla = ""
+let semilla = checkMate
 
 const chess = new Chess(semilla)
 
@@ -72,23 +72,23 @@ const updateGame = (pendingPromotion) => {
 
 const getGameResult = () => {
     if (chess.isCheckmate()) {
-        const winner = chess.turn() === "w" ? "BLACK" : "WHITE"
+        const winner = chess.turn() === "w" ? "NEGRAS" : "BLANCAS"
         
-        return "CHECKMATE - WINNER - " + winner
+        return "JAQUE MATE - GANADOR - " + winner
     }else if(chess.isDraw()){
-        let reason = "50 - MOVES - RULE"
+        let reason = "REGLA - 50 - MOVIMIENTOS"
         
         if(chess.isStalemate()){
-            reason = "STALEMATE"
+            reason = "AHOGADO"
         }else if(chess.isThreefoldRepetition()){
-            reason = "REPETITION"
+            reason = "REPETICION"
         }else if(chess.isInsufficientMaterial()){
-            reason = "INSUFFICIENT MATERIAL"
+            reason = "TABLAS"
         }
 
-        return "DRAW - " + reason
+        return "EMPATE - " + reason
     }else{
-        return "UNKNOWN REASON"
+        return "MOTIVO DESCONOCIDO"
     }
 }
 

@@ -11,7 +11,7 @@
 
 .juego{
     margin: auto;
-    width: 60%;
+    width: 100%;
     min-height: calc(100vh - 50px);
     display: flex;
     padding: 100px 0px;

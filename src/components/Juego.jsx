@@ -54,24 +54,26 @@ const Juego = () => {
 
     return(
         <div className="jugar">
-            <h1>¿Podrá el alumno superar el maestro?</h1>
+            <h1>¿Podrá el alumno superar al maestro?</h1>
             <div className="juego">
-                { isGameOver && ( 
-                    <h2 className="vertical-text">
-                        GAME OVER
-                        <button onClick={resetGame}>
-                            <span className="vertical-text">NEW GAME</span>
-                        </button>
-                    </h2>
-                ) }
-                { bodyParts.map(part => (
-                    part
-                )) } 
-                { result && ( 
-                    <h2 className="vertical-text">
-                        { result }
-                    </h2>
-                ) }
+                <div className="game">
+                    { isGameOver && ( 
+                        <h2 className="vertical-text">
+                            FIN DEL JUEGO
+                            <button onClick={resetGame}>
+                                <span className="vertical-text">JUGAR DE NUEVO</span>
+                            </button>
+                        </h2>
+                    ) }
+                    { bodyParts.map(part => (
+                        part
+                    )) } 
+                    { result && ( 
+                        <h2 className="vertical-text">
+                            { result }
+                        </h2>
+                    ) }
+                </div>
                 { state.notificacion && <Notification text={ state.notificacion }/> }
             </div>
             <Footer/>

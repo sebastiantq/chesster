@@ -1,4 +1,5 @@
 import React from 'react'
+import { useCallback } from 'react';
 import { useEffect } from 'react';
 
 import { useDispatch /*, useSelector */ } from "react-redux";
@@ -12,15 +13,15 @@ import "./Notification.css"
 const Notification = (props) => {
   const dispatch = useDispatch()
 
-  const close = () => {
+  const close = useCallback(() => {
     dispatch(setNotificacion(null))
-  }
+  }, [dispatch])
 
   useEffect(() => {
     setTimeout(() => {
       close()
     }, 5000)
-  }, [])
+  }, [close])
 
   return (
     <div id="notif" className="not">

@@ -3,6 +3,7 @@ import {Routes, Route} from 'react-router-dom';
 
 import Menu from './components/Menu';
 import Juego from './components/Juego';
+// import Chess from './components/Chess';
 import Inicio from './components/Inicio';
 import Informacion from './components/Informacion';
 import Login from './components/Pop/Login';

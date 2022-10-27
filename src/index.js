@@ -8,15 +8,20 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from './store';
 
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <Provider>
-      <BrowserRouter>
-        <App/>
-      </BrowserRouter>
-    </Provider>
+    <DndProvider backend={ HTML5Backend }>
+      <Provider>
+        <BrowserRouter>
+          <App/>
+        </BrowserRouter>
+      </Provider>
+    </DndProvider>
   </React.StrictMode>
 );
 

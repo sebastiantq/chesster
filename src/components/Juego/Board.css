@@ -1,0 +1,74 @@
+.board{
+    color: white;
+    width: 48vw;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 10px solid goldenrod;
+    border-radius: 10px;
+}
+
+.square{
+    width: 6vw;
+    height: 6vw;
+}
+
+.promote-board{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.promote-square{
+    width: 50%;
+    height: 50%;
+}
+
+.board-square{
+    width: 100%;
+    height: 100%;
+}
+
+.cursor-pointer{
+    cursor:pointer;
+}
+
+.black-square{
+    background-color: black;
+}
+
+.white-square{
+    background-color: white;
+}
+
+.piece-container{
+    cursor: grab;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.piece{
+    max-width: 70%;
+    max-height: 70%;
+}
+
+.vertical-text{
+    text-orientation: upright;
+    color: white;
+    writing-mode: vertical-lr;
+    padding: 10px;
+}
+
+.vertical-text button{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid goldenrod;
+}
+
+.vertical-text button span{
+    color: black !important;
+}

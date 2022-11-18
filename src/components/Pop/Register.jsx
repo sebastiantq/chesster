@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { app } from '../../firebase/Firebase'
 // import { useNavigate } from 'react-router-dom'
 
 import "./Register.css"
@@ -16,6 +17,24 @@ const Register = ({ setPopup }) => {
       cpassword: ""
   })
 
+  
+  const submitHandler = (e)=> {
+    e.preventDefault();
+    const correo = e.target.emailField.value
+    const usuario = e.target.userField.value
+    const clave = e.target.passwordField.value
+    const clave2 = e.target.passwordFieldC.value
+    register()
+    console.log(correo, usuario, clave, clave2)
+    app.auth().createUserWithEmailAndPassword(correo, clave).then((usuarioFirebase)=>{
+      console.log("usuario creado:", usuarioFirebase)
+    })
+    //app.auth().createUserWithEmailAndPassword(correo, clave)
+    //.then((usuarioFirebase)=>{
+      //console.log("Usuario creado:", usuarioFirebase)
+    //})
+  }
+  
   const { username, email, password, cpassword } = inputs
 
   const register = () => {
@@ -39,11 +58,11 @@ const Register = ({ setPopup }) => {
     setPopup("login")
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
 
-    register()
-  }
+  //   register()
+  // }
 
   const handleSpace = (event) => { // No espacios en username y email
     if (event.code === "Space") event.preventDefault()
@@ -56,7 +75,7 @@ const Register = ({ setPopup }) => {
   return (
     <div className='blur'>
       <div className='register'>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={submitHandler}>
           <div className='logo'>
             <a href="/" className='logo'>
               <div className="top">
@@ -69,25 +88,25 @@ const Register = ({ setPopup }) => {
           <hr/>
           <div className="user">
             <label htmlFor="username">Usuario:</label>
-            <input type="text" onKeyDown={handleSpace} onChange={handleChange} name="username"/>
+            <input type="text" id="userField" onKeyDown={handleSpace} onChange={handleChange} name="username"/>
           </div>
           <div className="email">
             <label htmlFor="email">Correo electrónico:</label>
-            <input type="text" onKeyDown={handleSpace} onChange={handleChange} name="email"/>
+            <input type="text" id="emailField" onKeyDown={handleSpace} onChange={handleChange} name="email"/>
           </div>
           <div className="pass">
             <label htmlFor="password">Clave:</label>
-            <input type="password" onChange={handleChange} name="password"/>
+            <input type="password" id="passwordField" onChange={handleChange} name="password"/>
           </div>
           <div className="pass">
             <label htmlFor="cpassword">Confirma tu clave:</label>
-            <input type="password" onChange={handleChange} name="cpassword"/>
+            <input type="password" id="passwordFieldC" onChange={handleChange} name="cpassword"/>
           </div>
           <p>{estadoRegister}</p>
           <br />
           <div className="buttons">
-            <button type='submit'>Registrarse</button>
-            <button className="enlace" onClick={ () => { /* navigate("/login") */ setPopup("login") } }>Ya tengo una cuenta</button>
+            <button type='submit' >Registrarse</button>
+            <button className="enlace" onClick={ () => { setPopup("login") } }>Ya tengo una cuenta</button>
           </div>
         </form>
       </div>

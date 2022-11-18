@@ -3,27 +3,34 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 
-import {auth, userExist} from '../../firebase/Firebase';
+// import {auth, userExist} from '../../firebase/Firebase';
 
 import { setNotificacion } from "../../store/notificacion";
 import { setLogueado } from "../../store/sesion";
 
+import { app } from '../../firebase/Firebase';
+import Register from './Register';
+
 import "./Login.css";
-import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup } from 'firebase/auth';
-import { useEffect } from 'react';
+// import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup } from 'firebase/auth';
+// import { useEffect } from 'react';
+//import AuthProvider from './AuthProvider';
+
 
 const Login = ({ setPopup }) => {
     
     const navigate = useNavigate()
     const dispatch = useDispatch()
+    const [usuario, setUsuario] = useState(null)
 
     const [inputs, setInputs] = useState({
         username: "",
         password: ""
     })
 
-    const [currentUser, setCurrentUser] = useState(null);
-    const [state, setCurrentState] = useState(0);
+    
+    // const [currentUser, setCurrentUser] = useState(null);
+    // const [state, setCurrentState] = useState(0);
 
     /*
     State
@@ -45,67 +52,56 @@ const Login = ({ setPopup }) => {
         "juan": "juan"
     }
 
-    useEffect(() => {
-        setCurrentState(4)
-        onAuthStateChanged(auth, handleUserStateChanged);
-    },[])
+    // useEffect(() => {
+    //     setCurrentState(4)
+    //     onAuthStateChanged(auth, handleUserStateChanged);
+    // },[])
 
-    async function handleUserStateChanged(user){
-        if(user){
-            const isRegistered = await userExist(user.uid)
-            if(isRegistered){
-                setCurrentState(2)
-                console.log("Me loguie")
-            }else{
-                setCurrentState(3)
-                console.log("No Me loguie")
-            }
-            console.log(user.displayName)
-        }else{
-            setCurrentState(4)
-            console.log('no hay nadie autenticado')
-        }
-    }
+    // async function handleUserStateChanged(user){
+    //     if(user){
+    //         const isRegistered = await userExist(user.uid)
+    //         if(isRegistered){
+    //             setCurrentState(2)
+    //             console.log("Me loguie")
+    //         }else{
+    //             setCurrentState(3)
+    //             console.log("logueado pero no registrado")
+    //         }
+    //         console.log(user.displayName)
+    //     }else{
+    //         setCurrentState(4)
+    //         console.log('no hay nadie autenticado')
+    //     }
+    // }
 
 
-    async function reDirect(){
-        if(state === 2 ){
-            dispatch(setNotificacion("Login exitoso, doctor"))
-            dispatch(setLogueado(true))
-            setPopup("")
-            navigate("/jugar")
-        }
-        if (state === 3){
-            setPopup("register")
-        }
-    }
+    // async function reDirect(){
+    //     if(state === 2){
+    //         setPopup("")
+    //         dispatch(setNotificacion("Login exitoso, doctor" + currentUser.displayName))
+    //         dispatch(setLogueado(true))
+    //         navigate("/jugar")
+    //     }
+    //     if (state === 3){
+    //         setPopup("register")
+    //     }
+    // }
 
-    async function handleOnClick(){
-        const googleProvider = new GoogleAuthProvider()
-        signInWithGoogle(googleProvider)
-        async function signInWithGoogle( googleProvider ){
-            try {
-                const res = await signInWithPopup(auth, googleProvider)
-                console.log(res)
-            }catch (error){
-                console.error(error)
-            }
-        }
-        reDirect()
-    }
+    // async function handleOnClick(){
+    //     const googleProvider = new GoogleAuthProvider()
+    //     signInWithGoogle(googleProvider)
+    //     async function signInWithGoogle( googleProvider ){
+    //         try {
+    //             const res = await signInWithPopup(auth, googleProvider)
+    //             reDirect()
+    //             console.log(res)
+    //         }catch (error){
+    //             console.error(error)
+    //         }
+    //     }
+    // }
 
     const login = () => {
-        if(state === 2 ){
-            dispatch(setNotificacion("Login exitoso, doctor"))
-            dispatch(setLogueado(true))
-            setPopup("")
-            navigate("/jugar")
-        }
-
-        if(state === 3 ){
-            console.log("Aqui estoy yo sin registro")
-            setPopup("register")
-        }
 
         if(usuarios.includes(username) && password === contraseñas[username]){
 
@@ -162,13 +158,13 @@ const Login = ({ setPopup }) => {
                         <button onClick={() => { setPopup("") }}>X</button>
                     </div>
                     <hr/>
-                    <div className="googleButtonDiv">
+                    {/* <div className="googleButtonDiv">
                         <button className='googleButton' onClick={ handleOnClick }> 
                             <ion-icon name="logo-google"></ion-icon>
                             Iniciar Sesión Con Google 
                          </button>
                     </div>
-                    <hr/>
+                    <hr/> */}
                     <div className="user">
                         <label htmlFor="username">Usuario/Correo electrónico:</label>
                         <input onKeyDown={handleSpace} onChange={handleChange} type="text" name="username" required/>
@@ -182,7 +178,7 @@ const Login = ({ setPopup }) => {
                     <div className="buttons">
                         <button type='submit'>Iniciar sesión</button>
                         <button className='enlace' onClick={ passwordForgot }>Olvidaste tu contraseña</button>
-                        <button className='enlace' onClick={ () => { /* navigate("/register") */ setPopup("register") } }>Sing Up</button>
+                        <button className='enlace' onClick={ () => { setPopup("register") } }>Sing Up</button>
                     </div>
                 </form>
             </div>

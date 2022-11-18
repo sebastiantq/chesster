@@ -19,7 +19,12 @@ import './components/Menu/Menu.css'
 import './components/Juego/Juego.css'
 import './components/Inicio/Inicio.css'
 
+import { app } from './firebase/Firebase';
+
 const App = () => {
+  
+  const [usuario, setUsuario] = React.useState(null);
+  
   return (
     <div className="App">
       <link href='https://fonts.googleapis.com/css?family=Lobster Two|PT Serif|Teko|Ibarra Real Nova|Noto Sans|Noto Serif Display|Raleway' rel='stylesheet'></link>
@@ -27,7 +32,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Inicio/>}></Route>
         <Route path='/jugar' element={<Juego/>}></Route>
-        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register/>}></Route>
         <Route path='/info' element={<Informacion/>}></Route>
         <Route path='/info/historia' element={<Historia/>}></Route>

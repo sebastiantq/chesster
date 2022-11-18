@@ -1,15 +1,19 @@
-import React from 'react'
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
-// import { useNavigate } from "react-router-dom/dist";
 
-import { setNotificacion } from "../../store/notificacion"
-import { setLogueado } from "../../store/sesion"
+import {auth, userExist} from '../../firebase/Firebase';
 
-import "./Login.css"
+import { setNotificacion } from "../../store/notificacion";
+import { setLogueado } from "../../store/sesion";
+
+import "./Login.css";
+import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup } from 'firebase/auth';
+import { useEffect } from 'react';
 
 const Login = ({ setPopup }) => {
+    
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
@@ -17,6 +21,18 @@ const Login = ({ setPopup }) => {
         username: "",
         password: ""
     })
+
+    const [currentUser, setCurrentUser] = useState(null);
+    const [state, setCurrentState] = useState(0);
+
+    /*
+    State
+    0:inicializar
+    1:loading
+    2:login completo
+    3:login pero sin registro
+    4:nadie logueado
+    */
 
     const { username, password } = inputs
 
@@ -29,9 +45,69 @@ const Login = ({ setPopup }) => {
         "juan": "juan"
     }
 
+    useEffect(() => {
+        setCurrentState(4)
+        onAuthStateChanged(auth, handleUserStateChanged);
+    },[])
+
+    async function handleUserStateChanged(user){
+        if(user){
+            const isRegistered = await userExist(user.uid)
+            if(isRegistered){
+                setCurrentState(2)
+                console.log("Me loguie")
+            }else{
+                setCurrentState(3)
+                console.log("No Me loguie")
+            }
+            console.log(user.displayName)
+        }else{
+            setCurrentState(4)
+            console.log('no hay nadie autenticado')
+        }
+    }
+
+
+    async function reDirect(){
+        if(state === 2 ){
+            dispatch(setNotificacion("Login exitoso, doctor"))
+            dispatch(setLogueado(true))
+            setPopup("")
+            navigate("/jugar")
+        }
+        if (state === 3){
+            setPopup("register")
+        }
+    }
+
+    async function handleOnClick(){
+        const googleProvider = new GoogleAuthProvider()
+        signInWithGoogle(googleProvider)
+        async function signInWithGoogle( googleProvider ){
+            try {
+                const res = await signInWithPopup(auth, googleProvider)
+                console.log(res)
+            }catch (error){
+                console.error(error)
+            }
+        }
+        reDirect()
+    }
+
     const login = () => {
+        if(state === 2 ){
+            dispatch(setNotificacion("Login exitoso, doctor"))
+            dispatch(setLogueado(true))
+            setPopup("")
+            navigate("/jugar")
+        }
+
+        if(state === 3 ){
+            console.log("Aqui estoy yo sin registro")
+            setPopup("register")
+        }
+
         if(usuarios.includes(username) && password === contraseñas[username]){
-            // console.log("Logueado")
 
             if (username === "sebastianh"){
                 dispatch(setNotificacion("Login exitoso, Doctor Sebastián"))
@@ -45,9 +121,6 @@ const Login = ({ setPopup }) => {
             setPopup("")
             navigate("/jugar")
         }else{
-            // console.log("User: " + username + " & pass: " + password + ", db: " + contraseñas[username])
-            // console.log("1. " + usuarios.includes(username))
-            // console.log("2. " + password === contraseñas[username])
             setEstadoLogin("Usuario y/o contraseña incorrecta")
         }   
     }
@@ -73,6 +146,8 @@ const Login = ({ setPopup }) => {
         setInputs({ ...inputs, [e.target.name]: e.target.value })
     }
 
+    //Iniciar sesion con google
+
     return (
         <div className='blur'>
             <div className='login'>
@@ -85,6 +160,13 @@ const Login = ({ setPopup }) => {
                             </div>
                         </a>
                         <button onClick={() => { setPopup("") }}>X</button>
+                    </div>
+                    <hr/>
+                    <div className="googleButtonDiv">
+                        <button className='googleButton' onClick={ handleOnClick }> 
+                            <ion-icon name="logo-google"></ion-icon>
+                            Iniciar Sesión Con Google 
+                         </button>
                     </div>
                     <hr/>
                     <div className="user">

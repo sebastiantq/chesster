@@ -131,3 +131,28 @@
     font-size: 16px;
     margin-bottom: 5px;
 }
+
+@media screen and (max-width: 700px) {
+    /* .footer-separation{
+        min-width: 25%;
+        padding: 0;
+    }
+    .footer-top{
+        width: 90%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+    .Footer{
+        height: 420px;;
+    } */
+    #midle-f{
+        visibility: collapse;
+    }
+    #right-f{
+        visibility: collapse;
+    }
+    .footer-separation{
+        width: 100%;
+    }
+  }

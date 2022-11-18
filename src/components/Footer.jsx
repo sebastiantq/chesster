@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="Footer">
       <div className="footer-top">
         {/* LEFT SEPARATION */}
-        <div className="footer-separation">
+        <div className="footer-separation" id="left-f">
           <div className="left-center">
             <div className="image-div">
               <img src={"/javelogo.png"} alt={"Chess"} className="img-logo" />
@@ -22,7 +22,7 @@ const Footer = () => {
           </div>
         </div>
         {/* MID SEPARATION */}
-        <div className="footer-separation">
+        <div className="footer-separation" id="midle-f">
           <div className="mid-center">
             {/* <div className="image-div">
               <img
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
         </div>
         {/* RIGHT SEPARATION */}
-        <div className="footer-separation">
+        <div className="footer-separation" id="right-f">
           <div className="right-center">
             {/* <div className="image-div">
               <img

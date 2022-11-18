@@ -51,3 +51,15 @@
     font-size: 55px;
     font-family: "PT Serif";
   }
+
+  @media screen and (max-width: 700px){
+    .reglas-header{
+      display: none;
+    }
+
+    .reglas-texto{
+      width: 100%;
+      overflow: visible;
+      height: 100%;
+    }
+  }

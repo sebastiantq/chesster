@@ -17,7 +17,7 @@
 
 .landAction > img{
     width: 15%;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .landAction > h2{
@@ -108,3 +108,30 @@
         background-color: rgba(0, 0, 0, 0.0);
     }
 }
+
+@media screen and (max-width: 700px) {
+    .inicio{
+        flex-direction: column;
+    }
+
+    .landText{
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .landText > p{
+        color: white;
+        font-size: 30px;
+        width: 70%;
+        margin: auto;
+    }
+
+    .landAction > p{
+        font-size: 30px;
+        width: 85%;
+    }
+    .landAction > img{
+        width: 34%;
+        /* border-radius: 5px; */
+    }
+  }

@@ -1,3 +1,6 @@
+
+
+
 .informacion{
     width: 100%;
     min-height: calc(100vh - 50px);
@@ -9,7 +12,12 @@
     /* background-color: #967258; */
     /* background-color: #ECE0D0; */
     background-color: #F1E8DC;
+    
 }
+
+
+
+
 
 .informacion > a{
     text-decoration: none;
@@ -42,4 +50,12 @@
 
 .historia > div, .reglas > div, .trucos > div{
     padding: 20px;
+}
+
+
+@media screen and (max-width: 700px) {
+    .informacion{
+        display: inline-block;
+        padding: auto;
+    }
 }

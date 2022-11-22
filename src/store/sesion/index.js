@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    logueado: false
+    logueado: false,
+    registrado: false,
 };
 
 const useSlice = createSlice({
@@ -11,9 +12,12 @@ const useSlice = createSlice({
         setLogueado: (state, action) => {
             state.logueado = action.payload
         },
+        setRegistrado: (state,action) => {
+            state.registrado = action.payload
+        }
     }
 })
 
 export const { setLogueado } = useSlice.actions
-
+export const { setRegistrado } = useSlice.actions
 export default useSlice.reducer

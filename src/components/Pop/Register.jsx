@@ -1,14 +1,15 @@
 import React from 'react'
 import { useState } from 'react'
 import { app } from '../../firebase/Firebase'
-// import { useNavigate } from 'react-router-dom'
-
+import { setRegistrado } from "../../store/sesion";
+import { setLogueado } from "../../store/sesion";
 import "./Register.css"
 
-const Register = ({ setPopup }) => {
-  // const navigate = useNavigate()
+const Register = (props) => {
 
   const [estadoRegister, setEstadoRegister] = useState("")
+
+  let setPopup = props.setPopup
 
   const [inputs, setInputs] = useState({
       username: "",
@@ -26,15 +27,14 @@ const Register = ({ setPopup }) => {
     const clave2 = e.target.passwordFieldC.value
     register()
     console.log(correo, usuario, clave, clave2)
-    app.auth().createUserWithEmailAndPassword(correo, clave).then((usuarioFirebase)=>{
+    app.auth().createUserWithEmailAndPassword(correo, clave)
+    .then((usuarioFirebase)=>{
       console.log("usuario creado:", usuarioFirebase)
+      console.log("email: ", usuarioFirebase.user.email)
+      setRegistrado(true)
+      setLogueado(true)
     })
-    //app.auth().createUserWithEmailAndPassword(correo, clave)
-    //.then((usuarioFirebase)=>{
-      //console.log("Usuario creado:", usuarioFirebase)
-    //})
   }
-  
   const { username, email, password, cpassword } = inputs
 
   const register = () => {
@@ -57,12 +57,6 @@ const Register = ({ setPopup }) => {
 
     setPopup("login")
   }
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-
-  //   register()
-  // }
 
   const handleSpace = (event) => { // No espacios en username y email
     if (event.code === "Space") event.preventDefault()
